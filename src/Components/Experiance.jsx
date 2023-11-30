@@ -6,7 +6,8 @@ import reactimg from "../../public/react.png";
 import github from "../../public/github.png";
 import tailwindimg from "../../public/tailwind.png";
 import nodeimg from "../../public/node.png";
-import awsicon from "../../public/AWSlogo"
+import awsicon from "../../public/AWSIcons.png";
+import mongodbicon from "../../public/MongoDbicon.png";
 
 
 const Experiance = () => {
@@ -49,9 +50,9 @@ const Experiance = () => {
 		},
 		{
 		  id: 7,
-		//   src: graphql,
-		  title: "GraphQL",
-		  style: "shadow-pink-400",
+		  src: mongodbicon,
+		  title: "MongoDb",
+		  style: "shadow-green-400",
 		},
 		{
 		  id: 8,
@@ -59,6 +60,12 @@ const Experiance = () => {
 		  title: "GitHub",
 		  style: "shadow-gray-400",
 		},
+		{
+			id:9,
+			src:awsicon,
+			title:"AWS",
+			style:"shadow-yellow-400"
+		}
 	  ];
   return (
 	<div

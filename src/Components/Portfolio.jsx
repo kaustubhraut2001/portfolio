@@ -1,4 +1,9 @@
 import React from "react";
+import Shopnow from "../../public/ShopNow.png";
+import Map from "../../public/Mapbox.png";
+import wikiapi from "../../public/WikiArticals.png";
+import portpolio from "../../public/portfolio.png";
+
 
 
 
@@ -6,29 +11,25 @@ const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
-      // src: htmlimg,
+      src: Shopnow,
+      title : "ShopNow",
+      code : "https://github.com/kaustubhraut2001/ShopNow"
 
     },
     {
       id: 2,
-      // src: cssimg,
+      src: Map,
+     title :  "Mapbox",
+     code :   "https://github.com/kaustubhraut2001/Travel-App/tree/master"
     },
+
     {
       id: 3,
-      // src: javascriptimg,
-    },
-    {
-      id: 4,
-      // src: reactimg,
-    },
-    {
-      id: 5,
-      // src: tailwindimg,
-    },
-    {
-      id: 6,
-      // src: nodeimg,
-    },
+      src: portpolio,
+      title : "Portfolio",
+      code : "https://github.com/kaustubhraut2001/portfolio"
+    }
+
   ];
   return (
     <div
@@ -44,19 +45,22 @@ const Portfolio = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {portfolios.map(({ id, src }) => (
+          {portfolios.map(({ id, src, title ,code }) => (
             <div key={id} className=" shadow-md shadow-gray-600 rounded-lg px-7 h-30 w-35">
               <img
                 src={src}
                 alt=""
                 className="rounded-md duration-200 hover:scale-105"
               />
+              <div className="flex justify-center items-center">
+              {title}
+              </div>
               <div className="flex items-center justify-center">
                 <button className=" w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
                   Demo
                 </button>
                 <button className="px-6 py-3 w-1/2 m-4 duration-200 hover:scale-105">
-                  Code
+                  <a href={code} target="_blank">Code</a>
                 </button>
               </div>
             </div>
