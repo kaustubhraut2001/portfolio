@@ -1,40 +1,49 @@
 import React from 'react'
+import cssimg from "../../public/css.png";
+import htmlimg from "../../public/html.png";
+import javascriptimg from "../../public/javascript.png";
+import reactimg from "../../public/react.png";
+import github from "../../public/github.png";
+import tailwindimg from "../../public/tailwind.png";
+import nodeimg from "../../public/node.png";
+import awsicon from "../../public/AWSlogo"
+
 
 const Experiance = () => {
 	const techs = [
 		{
 		  id: 1,
-		//   src: html,
+		   src: htmlimg,
 		  title: "HTML",
 		  style: "shadow-orange-500",
 		},
 		{
 		  id: 2,
-		//   src: css,
+		  src: cssimg,
 		  title: "CSS",
 		  style: "shadow-blue-500",
 		},
 		{
 		  id: 3,
-		//   src: javascript,
+		  src: javascriptimg	,
 		  title: "JavaScript",
 		  style: "shadow-yellow-500",
 		},
 		{
 		  id: 4,
-		//   src: reactImage,
+		  src: reactimg,
 		  title: "React",
 		  style: "shadow-blue-600",
 		},
 		{
 		  id: 5,
-		//   src: nextjs,
-		  title: "Next JS",
+		  src: nodeimg,
+		  title: "Node JS",
 		  style: "shadow-white",
 		},
 		{
 		  id: 6,
-		//   src: tailwind,
+		  src: tailwindimg,
 		  title: "Tailwind",
 		  style: "shadow-sky-400",
 		},
@@ -46,14 +55,14 @@ const Experiance = () => {
 		},
 		{
 		  id: 8,
-		//   src: github,
+		  src: github,
 		  title: "GitHub",
 		  style: "shadow-gray-400",
 		},
 	  ];
   return (
 	<div
-	name="experience"
+	name="experiance"
 	className="bg-gradient-to-b from-gray-800 to-black w-full h-screen"
   >
 	<div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">

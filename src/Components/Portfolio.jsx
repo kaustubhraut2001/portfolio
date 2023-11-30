@@ -1,26 +1,33 @@
 import React from "react";
 
+
+
 const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
-      src: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      // src: htmlimg,
+
     },
     {
       id: 2,
-      src: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      // src: cssimg,
     },
     {
       id: 3,
-      src: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      // src: javascriptimg,
     },
     {
       id: 4,
-      src: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      // src: reactimg,
     },
     {
       id: 5,
-      src: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      // src: tailwindimg,
+    },
+    {
+      id: 6,
+      // src: nodeimg,
     },
   ];
   return (
@@ -38,7 +45,7 @@ const Portfolio = () => {
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
           {portfolios.map(({ id, src }) => (
-            <div key={id} className=" shadow-md shadow-gray-600 rounded-lg">
+            <div key={id} className=" shadow-md shadow-gray-600 rounded-lg px-7 h-30 w-35">
               <img
                 src={src}
                 alt=""
