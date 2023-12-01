@@ -9,40 +9,40 @@ const SocialLink = () => {
       id: 1,
       child: (
         <>
-          <FaGithub size={30} />
+          GitHub<FaGithub size={30} />
         </>
       ),
-      href: "https://github.com",
+      href: "https://github.com/kaustubhraut2001",
       style: "rounded-tr-md",
     },
     {
       id: 2,
       child: (
         <>
-          <FaLinkedin size={30} />
+          Linkedin <FaLinkedin size={30} />
         </>
       ),
-      href: "https://github.com",
+      href: "https://www.linkedin.com/in/kaustubh-raut-a36960190/",
       style: "rounded-tr-md",
     },
     {
       id: 3,
       child: (
         <>
-          <FaTwitter size={30} />
+          Twitter<FaTwitter size={30} />
         </>
       ),
-      href: "https://github.com",
+      href: "https://twitter.com/KAUSTUBHRA84940",
       style: "rounded-tr-md",
     },
     {
       id: 4,
       child: (
         <>
-          <HiOutlineMail size={30} />
+          Mail<HiOutlineMail size={30} />
         </>
       ),
-      href: "https://github.com",
+      href: "kaustubhraut135@gmail.com",
       style: "rounded-tr-md",
     },
     {
@@ -52,7 +52,7 @@ const SocialLink = () => {
           Resume<BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: "https://github.com",
+      href: "https://drive.google.com/file/d/1Z6dY6jIn9WBDbIyYE4TelXNLj3lQVZ8H/view?usp=drive_link",
       style: "rounded-tr-md",
       download: true,
     },
@@ -64,7 +64,7 @@ const SocialLink = () => {
       links.map(({id,child,style,href,download})=>(
         <li
         key={id}
-         className={"flex justify-between items-centerw-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-500" + " " + style}>
+         className={"flex justify-between items-centre h-14 px-4 ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 bg-gray-500" + " " + style}>
         <a
           href={href}
           className="flex justify-between items-center w-full text-white"
@@ -73,9 +73,9 @@ const SocialLink = () => {
           rel="noreferrer"
 
         >
-          <>
-            Linkedin <FaLinkedin size={30} />
-          </>
+
+             {child}
+
         </a>
       </li>
       ))

@@ -2,26 +2,21 @@ import React from "react";
 
 const About = () => {
   return (
-    <div name="about" className="w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white">
+    <div
+      name="about"
+      className="w-full h-80 bg-gradient-to-b from-gray-800 to-black text-white"
+    >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-coll justify-center w-full h-full">
         <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500"
-		  >About</p>
+          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
+            About
+          </p>
         </div>
-        <p
-		className="text-xl mt-20"
-		>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic
-          excepturi officiis repellendus. Quis, dicta. Hic facere delectus
-          blanditiis praesentium ratione inventore nam natus, nostrum adipisci
-          esse tempore, placeat veniam dolores.
-        </p>
-        <br />
-        <p className="text-xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-          alias ipsam saepe aspernatur rem quia dolore veniam dicta ratione
-          consequatur molestiae dignissimos ab magni a voluptates nemo
-          accusantium, et voluptatibus.
+        <p className="text-xl mt-20">
+          I am 2023 graduate with an 6 Months of Internship experiance at an
+          Amazon.I am proficient in both backend and frontend. I have worked on
+          various projects and have a good knowledge of Data Structures and
+          Algorithms. I am a quick learner and a team player.
         </p>
       </div>
     </div>
