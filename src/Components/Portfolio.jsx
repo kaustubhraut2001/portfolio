@@ -53,7 +53,10 @@ const Portfolio = () => {
                 alt=""
                 className="rounded-md duration-200 hover:scale-105"
               />
-              <div className="flex justify-center items-center">
+              <div className={`flex justify-center items-center ${
+                isDarkMode ? 'text-white' : 'text-gray-800'
+
+              }`}>
                 {title}
               </div>
               <div className="flex items-center justify-center">
