@@ -13,7 +13,7 @@ const About = () => {
   return (
     <div
       name="about"
-      className={`w-full h-80 bg-gradient-to-b ${gradientFrom} ${gradientTo} ${textColor}`}
+      className={`w-full h-80 bg-gradient-to-b ${gradientFrom} ${gradientTo} ${textColor} flex flex-wrap`}
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-coll justify-center w-full h-full">
         <div className="pb-8">

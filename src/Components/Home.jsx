@@ -14,7 +14,7 @@ const Home = () => {
         isDarkMode
           ? "bg-gradient-to-b from-black to-gray-800"
           : "bg-gradient-to-b from-white to-gray-200"
-      }`}
+      } flex flex-wrap`}
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="flex flex-col justify-center h-full">

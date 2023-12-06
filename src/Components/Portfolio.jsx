@@ -31,7 +31,7 @@ const Portfolio = () => {
   return (
     <div
       name="portfolio"
-      className={`bg-gradient-to-b ${isDarkMode ? 'from-black to-gray-800' : 'from-white to-gray-200'} w-full md:h-screen text-white`}
+      className={`bg-gradient-to-b ${isDarkMode ? 'from-black to-gray-800' : 'from-white to-gray-200'} w-full md:h-screen text-white flex flex-wrap`}
     >
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">

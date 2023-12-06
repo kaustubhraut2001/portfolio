@@ -87,7 +87,7 @@ const Experience = () => {
       name="experience"
       className={`bg-gradient-to-b ${
         isDarkMode ? 'from-gray-800 to-black' : 'from-white to-gray-200'
-      } w-full h-screen`}
+      } w-full h-screen flex flex-wrap`}
     >
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
         <div>
