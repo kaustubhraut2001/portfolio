@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 
 const About = () => {
   const darkMode = useSelector((state) => state.darkmode.isDarkMode);
-  console.log(darkMode + " from About");
 
   // Conditional classes based on darkMode state
   const textColor = darkMode ? "text-white" : "text-gray-800";
@@ -13,15 +12,15 @@ const About = () => {
   return (
     <div
       name="about"
-      className={`w-full h-80 bg-gradient-to-b ${gradientFrom} ${gradientTo} ${textColor} flex flex-wrap`}
+      className={`w-full h-auto md:h-80 bg-gradient-to-b ${gradientFrom} ${gradientTo} ${textColor} flex flex-wrap`}
     >
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-coll justify-center w-full h-full">
+      <div className="max-w-screen-lg p-4 mx-auto w-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
             About
           </p>
         </div>
-        <p className={`text-xl mt-20 ${darkMode ? "text-white" : "text-gray-800"}`}>
+        <p className={`text-xl ${darkMode ? "text-white" : "text-gray-800"}`}>
           I am a 2023 graduate with 6 months of internship experience at Amazon. I am proficient in both backend and frontend development. I have worked on various projects and have good knowledge of Data Structures and Algorithms. I am a quick learner and a team player.
         </p>
       </div>
