@@ -42,7 +42,7 @@ const NavBar = () => {
   ];
 
   return (
-    <div className={`flex justify-between items-center w-full h-20 px-4 text-white bg-gray-300 fixed opacity-50`}>
+    <div className={`flex justify-between items-center w-full h-20 px-4 ${nav? "text-white bg-black" : "text-white bg-gray-300 fixed opacity-50"} `}>
       <div className={`w-24 md:w-auto  bg-gray-300 `}>
         <img src={Logo} alt="logo" className="w-full h-auto" />
       </div>
@@ -50,7 +50,7 @@ const NavBar = () => {
         {links.map((items) => (
           <li
             key={items.id}
-            className={`cursor-pointer capitalize font-medium text-black hover:scale-105 duration-200`}
+            className={`cursor-pointer capitalize font-medium text-black  hover:scale-105 duration-200`}
           >
             <Link to={items.link} smooth duration={500}>{items.link}</Link>
           </li>
@@ -73,7 +73,7 @@ const NavBar = () => {
       </div>
 
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
+        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen  bg-black">
           {links.map((items) => (
             <li
               key={items.id}
