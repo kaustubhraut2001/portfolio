@@ -15,17 +15,16 @@ const Portfolio = () => {
         "Full-stack e-commerce platform with real-time inventory management",
       tech: ["React", "Node.js", "MongoDB"],
       code: "https://github.com/kaustubhraut2001/ShopNow",
-      demo: "#",
+      demo: "https://shopnowdeploy.onrender.com/",
     },
     {
       id: 2,
-      title: "Travel-APP",
-      image: "Mapbox.png",
-      description:
-        "Interactive travel planner with map integration and itinerary builder",
-      tech: ["React", "Mapbox", "Express"],
-      code: "https://github.com/kaustubhraut2001/Travel-App",
-      demo: "#",
+      title: "Drawing Tool",
+      image: "drawinf-tool.png",
+      description: "Collaborative drawing application with real-time updates",
+      tech: ["Next.js", "Socket.io", "Redux"],
+      code: "https://github.com/kaustubhraut2001/PaintAPP",
+      demo: "https://paint-app-ruddy.vercel.app/",
     },
     {
       id: 3,
@@ -35,7 +34,7 @@ const Portfolio = () => {
         "Modern developer portfolio with dark mode and responsive design",
       tech: ["React", "Tailwind", "Framer Motion"],
       code: "https://github.com/kaustubhraut2001/portfolio",
-      demo: "#",
+      demo: "https://kaustubh-raut-portfolio.netlify.app/",
     },
   ];
 
