@@ -16,7 +16,7 @@ const Contact = () => {
       icon: <MdEmail className="w-6 h-6" />,
       title: "Email",
       value: "kaustubhraut135@gmail.com",
-      link: "mailto:your.email@example.com",
+      link: "mailto:kaustubhraut135@gmail.com",
     },
     {
       icon: <MdPhone className="w-6 h-6" />,
