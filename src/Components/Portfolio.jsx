@@ -1,110 +1,149 @@
 import React from "react";
-import Shopnow from "../../public/ShopNow.png";
-import Map from "../../public/Mapbox.png";
-import wikiapi from "../../public/WikiArticals.png";
-import portpolio from "../../public/portfolio.png";
+import { motion } from "framer-motion";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { useSelector } from "react-redux";
 
 const Portfolio = () => {
   const isDarkMode = useSelector((state) => state.darkmode.isDarkMode);
-  const portfolios = [
+
+  const projects = [
     {
       id: 1,
-      src: Shopnow,
       title: "Shop Now",
+      image: "ShopNow.png",
+      description:
+        "Full-stack e-commerce platform with real-time inventory management",
+      tech: ["React", "Node.js", "MongoDB"],
       code: "https://github.com/kaustubhraut2001/ShopNow",
+      demo: "#",
     },
     {
       id: 2,
-      src: Map,
       title: "Travel-APP",
+      image: "Mapbox.png",
+      description:
+        "Interactive travel planner with map integration and itinerary builder",
+      tech: ["React", "Mapbox", "Express"],
       code: "https://github.com/kaustubhraut2001/Travel-App",
+      demo: "#",
     },
     {
-      id: 4,
-      src: portpolio,
+      id: 3,
       title: "Portfolio",
+      image: "portfolio.png",
+      description:
+        "Modern developer portfolio with dark mode and responsive design",
+      tech: ["React", "Tailwind", "Framer Motion"],
       code: "https://github.com/kaustubhraut2001/portfolio",
+      demo: "#",
     },
   ];
 
   return (
-    <div
+    <section
       name="portfolio"
-      className={`bg-gradient-to-b ${
-        isDarkMode ? "from-black to-gray-800" : "from-white to-gray-200"
-      } w-full min-h-screen text-white flex flex-wrap`}
+      className={`w-full min-h-screen py-20 ${
+        isDarkMode ? "bg-gray-900 text-gray-100" : "bg-gray-50 text-gray-900"
+      } transition-colors duration-300`}
     >
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col w-full">
-        <div className="pb-8">
-          <p
-            className={`text-4xl font-bold inline border-b-4 border-gray-500 ${
-              isDarkMode ? "text-white" : "text-gray-800"
-            }`}
-          >
-            Portfolio
-          </p>
-          <p
-            className={`py-6 ${
-              isDarkMode ? "text-white" : "text-gray-800"
-            }`}
-          >
-            Check out some of my work right here
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-16 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 relative inline-block">
+            Featured Work
+            <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-purple-500"></span>
+          </h2>
+          <p className="text-xl mt-4">
+            Selection of projects showcasing my technical capabilities
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 px-2 md:px-0">
-          {portfolios.map(({ id, src, title, code }) => (
-            <div
-              key={id}
-              className={`shadow-md ${
-                isDarkMode ? "shadow-gray-600" : "shadow-gray-300"
-              } rounded-lg px-4 py-6`}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className={`group relative overflow-hidden rounded-2xl shadow-xl ${
+                isDarkMode
+                  ? "bg-gray-800 hover:bg-gray-700"
+                  : "bg-white hover:bg-gray-50"
+              } transition-all duration-300`}
             >
-              <img
-                src={src}
-                alt=""
-                className="rounded-md duration-200 hover:scale-105 w-full"
-              />
-              <div
-                className={`text-center mt-3 ${
-                  isDarkMode ? "text-white" : "text-gray-800"
-                }`}
-              >
-                {title}
-              </div>
-              <div className="flex items-center justify-center mt-4 space-x-4">
-                <button
-                  className={`w-full py-2 duration-200 hover:scale-105 rounded ${
+              <div className="relative h-60 overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                />
+                <div
+                  className={`absolute inset-0 bg-gradient-to-t ${
                     isDarkMode
-                      ? "bg-gray-800 text-white"
-                      : "bg-white text-gray-800"
+                      ? "from-gray-900/90 to-gray-800/20"
+                      : "from-gray-900/70 to-gray-100/20"
                   }`}
-                >
-                  Demo
-                </button>
-                <button
-                  className={`w-full py-2 duration-200 hover:scale-105 rounded ${
-                    isDarkMode
-                      ? "bg-gray-800 text-white"
-                      : "bg-white text-gray-800"
-                  }`}
-                >
-                  <a
-                    href={code}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline"
-                  >
-                    Code
-                  </a>
-                </button>
+                />
               </div>
-            </div>
+
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-2xl font-bold">{project.title}</h3>
+                  <div className="flex space-x-3">
+                    <a
+                      href={project.code}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`p-2 rounded-full ${
+                        isDarkMode
+                          ? "text-gray-300 hover:text-white hover:bg-gray-600"
+                          : "text-gray-600 hover:text-gray-900 hover:bg-gray-200"
+                      } transition-colors`}
+                    >
+                      <FaGithub className="w-5 h-5" />
+                    </a>
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`p-2 rounded-full ${
+                        isDarkMode
+                          ? "text-gray-300 hover:text-white hover:bg-gray-600"
+                          : "text-gray-600 hover:text-gray-900 hover:bg-gray-200"
+                      } transition-colors`}
+                    >
+                      <FaExternalLinkAlt className="w-5 h-5" />
+                    </a>
+                  </div>
+                </div>
+
+                <p
+                  className={`text-sm ${
+                    isDarkMode ? "text-gray-300" : "text-gray-600"
+                  } mb-4`}
+                >
+                  {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-2">
+                  {project.tech.map((tech, i) => (
+                    <span
+                      key={i}
+                      className={`px-3 py-1 text-sm rounded-full ${
+                        isDarkMode
+                          ? "bg-gray-700 text-blue-300"
+                          : "bg-gray-200 text-blue-600"
+                      }`}
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

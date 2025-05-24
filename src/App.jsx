@@ -7,21 +7,18 @@ import Portfolio from "./Components/Portfolio";
 import Experiance from "./Components/Experiance";
 import Contact from "./Components/Contact";
 
-
 function App() {
-  return(
-  <>
-    <NavBar />
-
-    <Home />
-    <About/>
-    <Portfolio/>
-    <SocialLink/>
-    <Experiance/>
-    <Contact/>
-
-   </>
-  )
+  return (
+    <>
+      <NavBar />
+      <Home />
+      <About />
+      <Portfolio />
+      <SocialLink />
+      <Experiance />
+      <Contact />
+    </>
+  );
 }
 
 export default App;

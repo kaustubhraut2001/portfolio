@@ -5,9 +5,19 @@ export default {
         "./src/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-        extend: {},
-        fontFamily: {
-            signature: ['Great Vibes'],
+        extend: {
+            scrollSnapType: {
+                x: 'x mandatory',
+                y: 'y mandatory',
+            },
+            scrollSnapAlign: {
+                start: 'start',
+                center: 'center',
+                end: 'end',
+            },
+            fontFamily: {
+                signature: ['Great Vibes'],
+            },
         },
     },
     plugins: [],

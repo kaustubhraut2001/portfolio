@@ -3,8 +3,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@layer base {
-    html {
-        font-family: 'Raleway', sans-serif;
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Snap-scroll for desktop */
+
+@media (min-width: 768px) {
+    .snap-section {
+        scroll-snap-align: start;
     }
 }

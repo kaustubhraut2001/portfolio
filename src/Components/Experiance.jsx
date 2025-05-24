@@ -1,100 +1,154 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import cssimg from '../../public/css.png';
-import htmlimg from '../../public/html.png';
-import javascriptimg from '../../public/javascript.png';
-import Reactimg from '../../public/react.png';
-import tailwindimg from '../../public/tailwind.png';
-import nodeimg from '../../public/node.png';
-import mongodbimg from '../../public/MongoDbicon.png';
-import AWS from "../../public/AWSIcons.png";
+import React from "react";
+import { useSelector } from "react-redux";
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiTailwindcss,
+  SiNextdotjs,
+  SiFastapi,
+  SiExpress,
+  SiDjango,
+  SiMongodb,
+  SiMysql,
+  SiServerless,
+  SiGithubactions,
+  SiKubernetes,
+  SiTypescript,
+} from "react-icons/si";
+import {
+  FaReact,
+  FaNodeJs,
+  FaAws,
+  FaDocker,
+  FaSyncAlt,
+  FaGitAlt,
+  FaGithub,
+} from "react-icons/fa";
 
 const Experience = () => {
   const isDarkMode = useSelector((state) => state.darkmode.isDarkMode);
 
-  const techs = [
+  const techCategories = [
     {
-      id: 1,
-      src: htmlimg,
-      title: 'HTML',
-      style: isDarkMode ? 'shadow-orange-500' : 'shadow-orange-300',
+      title: "Frontend Mastery",
+      skills: [
+        { icon: <SiHtml5 />, name: "HTML5", level: "Advanced" },
+        { icon: <SiCss3 />, name: "CSS3", level: "Advanced" },
+        { icon: <SiJavascript />, name: "JavaScript", level: "Advanced" },
+        { icon: <FaReact />, name: "React", level: "Advanced" },
+        { icon: <SiTailwindcss />, name: "Tailwind", level: "Advanced" },
+        { icon: <SiNextdotjs />, name: "Nextjs", level: "Intermediate" },
+        { icon: <SiTypescript />, name: "TypeScript", level: "Intermediate" },
+      ],
     },
     {
-      id: 2,
-      src: cssimg,
-      title: 'CSS',
-      style: isDarkMode ? 'shadow-blue-500' : 'shadow-blue-300',
+      title: "Backend & Databases",
+      skills: [
+        { icon: <FaNodeJs />, name: "Node.js", level: "Advanced" },
+        { icon: <SiFastapi />, name: "FastAPI", level: "Intermediate" }, // Corrected icon
+        { icon: <SiExpress />, name: "Express.js", level: "Advanced" }, // Corrected icon
+        { icon: <SiDjango />, name: "Django", level: "Intermediate" }, // Corrected icon
+        { icon: <SiMongodb />, name: "MongoDB", level: "Intermediate" },
+        { icon: <SiMysql />, name: "MySQL", level: "Intermediate" }, // Corrected icon
+      ],
     },
     {
-      id: 3,
-      src: javascriptimg,
-      title: 'JavaScript',
-      style: isDarkMode ? 'shadow-yellow-500' : 'shadow-yellow-300',
+      title: "Cloud & DevOps",
+      skills: [
+        { icon: <FaAws />, name: "AWS", level: "Intermediate" },
+        { icon: <FaDocker />, name: "Docker", level: "Intermediate" }, // Corrected icon
+        { icon: <FaSyncAlt />, name: "CI/CD", level: "Intermediate" }, // Suggestion for CI/CD flow
+        { icon: <SiServerless />, name: "Serverless", level: "Intermediate" }, // Corrected icon
+        { icon: <SiGithubactions />, name: "github action", level: "Beginner" }, // Corrected icon
+        { icon: <SiKubernetes />, name: "Kubernetes", level: "Beginner" }, // Corrected icon
+      ],
     },
     {
-      id: 4,
-      src: Reactimg,
-      title: 'React',
-      style: isDarkMode ? 'shadow-sky-500' : 'shadow-sky-300',
-    },
-    {
-      id: 5,
-      src: tailwindimg,
-      title: 'Tailwind',
-      style: isDarkMode ? 'shadow-blue-500' : 'shadow-blue-300',
-    },
-    {
-      id: 6,
-      src: nodeimg,
-      title: 'Node',
-      style: isDarkMode ? 'shadow-green-500' : 'shadow-green-300',
-    },
-    {
-      id: 7,
-      src: mongodbimg,
-      title: 'MongoDB',
-      style: isDarkMode ? 'shadow-green-500' : 'shadow-green-300',
-    },
-    {
-      id: 8,
-      src: AWS,
-      title: 'AWS',
-      style: isDarkMode ? 'shadow-green-500' : 'shadow-green-300',
+      title: "Version Control & Collaboration",
+      skills: [
+        { icon: <FaGitAlt />, name: "Git", level: "Advanced" }, // Corrected icon
+        { icon: <FaGithub />, name: "GitHub", level: "Advanced" }, // Corrected icon
+      ],
     },
   ];
 
   return (
-    <div
+    <section
       name="experience"
-      className={`bg-gradient-to-b ${
-        isDarkMode ? 'from-gray-800 to-black' : 'from-white to-gray-200'
-      } w-full min-h-screen text-white flex flex-wrap`}
+      className={`w-full min-h-screen py-20 ${
+        isDarkMode ? "bg-gray-900 text-gray-100" : "bg-gray-50 text-gray-900"
+      } transition-colors duration-300`}
     >
-      <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full">
-        <div>
-          <p
-            className={`text-4xl font-bold border-b-4 border-gray-500 p-2 inline ${
-              isDarkMode ? 'text-white' : 'text-gray-800'
-            }`}
-          >
-            Experience
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-16 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 relative inline-block">
+            Technical Expertise
+            <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-purple-500"></span>
+          </h2>
+          <p className="text-xl mt-4">
+            Leveraging 2+ years of full-stack development experience, I build
+            robust digital solutions with proficiency in JavaScript, Python,
+            React.js, Node.js, AWS Services, and MongoDB.
           </p>
-          <p className="py-6">These are the technologies I've worked with</p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-8 text-center py-4 px-2 sm:px-0">
-          {techs.map(({ id, src, title, style }) => (
-            <div
-              key={id}
-              className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style} bg-gray-800`}
-            >
-              <img src={src} alt="" className="w-16 sm:w-20 mx-auto" />
-              <p className="mt-2 text-sm sm:text-base">{title}</p>
+        <div className="space-y-16">
+          {techCategories.map((category, index) => (
+            <div key={index} className="space-y-8">
+              <h3 className="text-3xl font-bold text-center mb-8">
+                {category.title}
+              </h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                {category.skills.map((skill, skillIndex) => (
+                  <div
+                    key={skillIndex}
+                    className={`p-6 rounded-xl flex flex-col items-center justify-center transition-all duration-300 ${
+                      isDarkMode
+                        ? "bg-gray-800 hover:bg-gray-700"
+                        : "bg-white hover:bg-gray-50"
+                    } shadow-lg hover:shadow-xl group`}
+                  >
+                    <div
+                      className={`text-5xl mb-4 ${
+                        isDarkMode
+                          ? "text-blue-400 group-hover:text-blue-300"
+                          : "text-blue-600 group-hover:text-blue-500"
+                      } transition-colors duration-300`}
+                    >
+                      {skill.icon}
+                    </div>
+                    <h4 className="text-xl font-semibold mb-2">{skill.name}</h4>
+                    <span
+                      className={`text-sm ${
+                        isDarkMode ? "text-blue-300" : "text-blue-500"
+                      } font-medium`}
+                    >
+                      {skill.level}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>
+
+        <div
+          className={`mt-16 p-8 rounded-xl ${
+            isDarkMode
+              ? "bg-gray-800 border border-gray-700"
+              : "bg-white border border-gray-200"
+          }`}
+        >
+          <h3 className="text-2xl font-semibold mb-4">Continuous Learning</h3>
+          <p className="text-lg">
+            Currently exploring advanced AWS services to build scalable,
+            type-safe applications and kurbernetes. Committed to staying updated
+            with emerging technologies through daily coding practice.
+          </p>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

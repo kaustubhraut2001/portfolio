@@ -1,0 +1,12 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Optional for snap-scroll */
+
+@media (min-width: 768px) {
+    .snap-section {
+        scroll-snap-align: start;
+    }
+}
